@@ -1,0 +1,127 @@
+{
+  "name": "吉賀 智寛",
+  "meta": {
+    "title": "吉賀 智寛 | Portfolio",
+    "description": "Think. Act. Connect. University of the Ryukyus, Faculty of Engineering | AI, System Development & Handball"
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "menu": "Open menu",
+    "close": "Close menu"
+  },
+  "hero": {
+    "lines": [
+      "Think.",
+      "Act.",
+      "Connect."
+    ],
+    "subtitle": "University of the Ryukyus, Faculty of Engineering | AI, System Development & Handball",
+    "paragraphs": [
+      "I dive into new experiences, learn through conversations, and think deeply about things.",
+      "As I explore the possibilities of technology, I also value human connections and kindness.",
+      "By stepping into unfamiliar worlds, I am discovering more of my own potential."
+    ],
+    "cta": "Explore my work",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "title": "About Me",
+    "label": "ABOUT ME",
+    "paragraphs": [
+      "I study electronics, information, and communication engineering at the University of the Ryukyus.",
+      "Alongside my studies, I help run AI courses and develop systems at 305LAB. I am also a member of the university's handball team.",
+      "I enjoy meeting and talking with people from different backgrounds. New experiences and human connections are important to me."
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "label": "PROJECTS",
+    "items": [
+      {
+        "id": "ryudaihandtrack",
+        "title": "RYUDAIHandTrack",
+        "category": "Web Application / Handball",
+        "paragraphs": [
+          "A web app I developed to record and analyze data from handball matches and training sessions.",
+          "It visualizes metrics such as shooting accuracy and goalkeeper save rates, and is currently used by the University of the Ryukyus handball team."
+        ],
+        "image": {
+          "src": "",
+          "alt": "",
+          "caption": ""
+        },
+        "visualCaption": "Handball-inspired graphic (not an app screenshot)"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "label": "EXPERIENCE",
+    "items": [
+      {
+        "title": "AI Adoption Support for Businesses (OJT)",
+        "category": "AI / OJT",
+        "paragraphs": [
+          "Through 305LAB, I help businesses use AI to address challenges in their work.",
+          "After speaking with the people involved, I use demo data to test potential AI solutions in advance. Based on the results, I work alongside them in hands-on, on-the-job training sessions to show how AI can be used."
+        ],
+        "image": {
+          "src": "",
+          "alt": "",
+          "caption": ""
+        }
+      },
+      {
+        "title": "AI Course Operations Support",
+        "category": "AI / Education",
+        "paragraphs": [
+          "Through 305LAB, I help run courses on AI.",
+          "My responsibilities include course preparation, on-site operations, and supporting participants."
+        ],
+        "image": {
+          "src": "",
+          "alt": "",
+          "caption": ""
+        }
+      },
+      {
+        "title": "University Handball",
+        "category": "Handball / Teamwork",
+        "paragraphs": [
+          "I have played handball for about 12 years, since elementary school, and am now a member of the University of the Ryukyus handball team.",
+          "I served as captain of my teams in elementary, junior high, and high school. In junior high school, I captained the Yamaguchi prefectural team for the JOC tournament. In high school, I was vice-captain of the Yamaguchi prefectural team for the National Sports Festival."
+        ],
+        "image": {
+          "src": "assets/handball.jpg",
+          "smallSrc": "assets/handball-800.jpg",
+          "width": 1600,
+          "height": 1066,
+          "alt": "Tomohiro Yoshiga in a red uniform, holding a handball and giving instructions on an indoor court.",
+          "caption": ""
+        }
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Connect.",
+    "label": "Get in touch",
+    "emailLabel": "Send me an email",
+    "labLabel": "Explore 305LAB's activities",
+    "instagramLabel": "305LAB Instagram",
+    "externalLabel": "Opens in a new tab"
+  },
+  "footer": {
+    "top": "Back to top",
+    "copyright": "吉賀 智寛"
+  },
+  "ui": {
+    "loading": "Loading…",
+    "error": "The page could not be loaded. Please check your connection and try again.",
+    "retry": "Try again",
+    "languageChanged": "Switched to English"
+  },
+  "romanizedName": "TOMOHIRO YOSHIGA"
+}

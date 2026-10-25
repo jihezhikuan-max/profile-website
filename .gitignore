@@ -1,0 +1,21 @@
+# Local working files; these are not used by the published site.
+/output/
+/tmp/
+
+# Editor, operating-system, and temporary files.
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+*.bak
+*~
+
+# Local credentials must never be committed.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx

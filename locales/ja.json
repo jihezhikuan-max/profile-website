@@ -1,0 +1,127 @@
+{
+  "name": "吉賀 智寛",
+  "meta": {
+    "title": "吉賀 智寛 | Portfolio",
+    "description": "考える。動く。人とつながる。琉球大学 工学部｜AI・システム開発・ハンドボール"
+  },
+  "nav": {
+    "about": "私について",
+    "projects": "プロジェクト",
+    "experience": "活動・経験",
+    "contact": "お問い合わせ",
+    "menu": "メニューを開く",
+    "close": "メニューを閉じる"
+  },
+  "hero": {
+    "lines": [
+      "考える。",
+      "動く。",
+      "人とつながる。"
+    ],
+    "subtitle": "琉球大学 工学部｜AI・システム開発・ハンドボール",
+    "paragraphs": [
+      "新しい経験に飛び込み、人との対話から学び、物事を深く考える。",
+      "テクノロジーの可能性を追いかけながら、人との縁や人情も大切に。",
+      "まだ知らない世界に触れながら、自分自身の可能性を広げています。"
+    ],
+    "cta": "活動を見る",
+    "scroll": "スクロール"
+  },
+  "about": {
+    "title": "私について",
+    "label": "ABOUT ME",
+    "paragraphs": [
+      "琉球大学工学部で電子情報通信を学んでいます。",
+      "学業の傍ら、305LABではAIに関する講座の運営支援やシステム開発などに携わっています。また、大学のハンドボール部にも所属しています。",
+      "さまざまな人と出会い、話をすることが好きです。新しい経験や人とのつながりを大切にしています。"
+    ]
+  },
+  "projects": {
+    "title": "制作実績",
+    "label": "PROJECTS",
+    "items": [
+      {
+        "id": "ryudaihandtrack",
+        "title": "RYUDAIHandTrack",
+        "category": "Web Application / Handball",
+        "paragraphs": [
+          "ハンドボールの試合や練習のデータを記録・分析するために開発したWebアプリです。",
+          "シュート決定率やゴールキーパーのセーブ率などを可視化し、現在は琉球大学ハンドボール部で実際に使用しています。"
+        ],
+        "image": {
+          "src": "",
+          "alt": "",
+          "caption": ""
+        },
+        "visualCaption": "ハンドボールをモチーフにしたグラフィック（アプリの画面ではありません）"
+      }
+    ]
+  },
+  "experience": {
+    "title": "活動・経験",
+    "label": "EXPERIENCE",
+    "items": [
+      {
+        "title": "企業向けAI活用支援（OJT）",
+        "category": "AI / OJT",
+        "paragraphs": [
+          "305LABの活動として、企業の業務課題に対するAI活用を支援しています。",
+          "担当者へのヒアリングをもとに、デモデータを使ってAIによる解決方法を事前に検証。その結果を踏まえ、OJT形式で担当者と一緒に操作しながら、AIの活用方法を伝えています。"
+        ],
+        "image": {
+          "src": "",
+          "alt": "",
+          "caption": ""
+        }
+      },
+      {
+        "title": "AI講座の運営支援",
+        "category": "AI / Education",
+        "paragraphs": [
+          "305LABの活動として、AIに関する講座の運営支援に携わっています。",
+          "講座の準備や当日の運営、受講者のサポートなどを担当しています。"
+        ],
+        "image": {
+          "src": "",
+          "alt": "",
+          "caption": ""
+        }
+      },
+      {
+        "title": "ハンドボール部での活動",
+        "category": "Handball / Teamwork",
+        "paragraphs": [
+          "小学生の頃から約12年間ハンドボールを続けており、現在は琉球大学ハンドボール部に所属しています。",
+          "小・中・高校ではそれぞれキャプテンを務め、中学時代にはJOC山口県選抜のキャプテン、高校時代には山口県国体選抜の副キャプテンを経験しました。"
+        ],
+        "image": {
+          "src": "assets/handball.jpg",
+          "smallSrc": "assets/handball-800.jpg",
+          "width": 1600,
+          "height": 1066,
+          "alt": "赤いユニフォームを着た吉賀智寛が、体育館でハンドボールを持ちながら周囲に指示を出している。",
+          "caption": ""
+        }
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Connect.",
+    "label": "お問い合わせ",
+    "emailLabel": "メールで連絡する",
+    "labLabel": "305LABの活動紹介",
+    "instagramLabel": "305LAB Instagram",
+    "externalLabel": "新しいタブで開きます"
+  },
+  "footer": {
+    "top": "トップへ",
+    "copyright": "吉賀 智寛"
+  },
+  "ui": {
+    "loading": "読み込み中…",
+    "error": "ページを読み込めませんでした。接続を確認して、もう一度お試しください。",
+    "retry": "再試行",
+    "languageChanged": "日本語に切り替えました"
+  },
+  "romanizedName": "TOMOHIRO YOSHIGA"
+}
