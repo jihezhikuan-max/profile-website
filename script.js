@@ -125,7 +125,7 @@ async function setLanguage(language) {
   const currentRequest = ++requestId;
   try {
     if (!cache.has(language)) {
-      const response = await fetch(`locales/${language}.json`);
+      const response = await fetch(`locales/${language}.json?v=20261106`);
       if (!response.ok) throw new Error('Locale unavailable');
       cache.set(language,await response.json());
     }
