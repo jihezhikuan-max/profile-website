@@ -1,7 +1,8 @@
 ﻿param(
     [ValidateRange(1024, 65535)]
     [int]$Port = 8000,
-    [switch]$NoBrowser
+    [switch]$NoBrowser,
+    [string]$BindAddress = "127.0.0.1"
 )
 
 $ErrorActionPreference = 'Stop'
@@ -49,10 +50,10 @@ function Get-AssetEntry([string]$Route) {
     }
     return @($assetPath, $imageTypes[[System.IO.Path]::GetExtension($name).ToLowerInvariant()])
 }
-$listener = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Loopback, $Port)
+$listener = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Parse($BindAddress), $Port)
 try {
     $listener.Start()
-    $url = "http://127.0.0.1:$Port/"
+    $url = "http://${BindAddress}:$Port/"
     Write-Host ""
     Write-Host "Profile Website - Local Preview"
     Write-Host "Open: $url"

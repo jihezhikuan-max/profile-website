@@ -28,24 +28,22 @@ function imageMarkup(image) {
   return `<figure class="real-media"><img src="${e(image.src)}"${responsive} alt="${e(image.alt)}" width="${width}" height="${height}" loading="lazy" decoding="async">${image.caption ? `<figcaption>${e(image.caption)}</figcaption>` : ''}</figure>`;
 }
 
-function courtGraphic(caption) {
-  return `<figure class="project-art reveal"><div class="art-meta mono" aria-hidden="true"><span>RYUDAI / HANDTRACK</span><span>01 — WEB APPLICATION</span></div><div class="court-wrap" aria-hidden="true"><svg class="court" viewBox="0 0 800 440" fill="none"><rect x="46" y="42" width="708" height="356" rx="2"/><path d="M400 42v356"/><circle cx="400" cy="220" r="48"/><path d="M46 92h25a128 128 0 0 1 0 256H46M754 92h-25a128 128 0 0 0 0 256h25"/><path class="court-dash" d="M46 60h30a160 160 0 0 1 0 320H46M754 60h-30a160 160 0 0 0 0 320h30"/><path d="M46 185H30v70h16M754 185h16v70h-16M135 210v20M665 210v20"/><path class="court-route" d="M320 300 430 174 580 240 716 218"/><circle class="court-dot" cx="320" cy="300" r="8"/><circle class="court-dot" cx="430" cy="174" r="8"/><circle class="court-dot" cx="580" cy="240" r="8"/><circle class="court-ball" cx="716" cy="218" r="12"/></svg></div><div class="art-word" aria-hidden="true">PLAY.<br><span>UNDERSTAND.</span></div><figcaption>${e(caption)}</figcaption></figure>`;
+function courtGraphic(caption, replayLabel) {
+  return `<figure class="project-art"><div class="art-meta mono" aria-hidden="true"><span>RYUDAI / HANDTRACK</span><span>01 — WEB APPLICATION</span></div><div class="court-wrap" aria-hidden="true"><svg class="court" viewBox="0 0 800 440" fill="none"><rect pathLength="1" x="46" y="42" width="708" height="356" rx="2"/><path pathLength="1" d="M400 42v356"/><circle pathLength="1" cx="400" cy="220" r="48"/><path pathLength="1" d="M46 92h25a128 128 0 0 1 0 256H46M754 92h-25a128 128 0 0 0 0 256h25"/><path class="court-dash" d="M46 60h30a160 160 0 0 1 0 320H46M754 60h-30a160 160 0 0 0 0 320h30"/><path pathLength="1" d="M46 185H30v70h16M754 185h16v70h-16M135 210v20M665 210v20"/><path class="court-route" d="M320 300 430 174 580 240 716 218"/><circle class="court-dot" cx="320" cy="300" r="8"/><circle class="court-dot" cx="430" cy="174" r="8"/><circle class="court-dot" cx="580" cy="240" r="8"/><circle class="court-ball" cx="716" cy="218" r="12"/></svg></div><div class="art-word" aria-hidden="true"><b>PLAY.</b><span>UNDERSTAND.</span></div><figcaption>${e(caption)}</figcaption><button class="replay-pass" type="button">${e(replayLabel)} <span aria-hidden="true">↻</span></button></figure>`;
 }
 
 function renderContent(data) {
-  return `<section class="hero" id="top" aria-labelledby="hero-title"><div class="container">
-    <div class="hero-kicker mono"><span><i class="status-dot" aria-hidden="true"></i> PERSONAL PORTFOLIO</span><span>OKINAWA, JAPAN</span></div>
-    <div class="hero-stage"><div class="hero-identity"><h1 id="hero-title" class="hero-title" lang="ja">${e(data.name)}</h1><p class="hero-romanized" lang="en">${e(data.romanizedName)}</p><p class="hero-tagline">${data.hero.lines.map(line=>`<span>${e(line)}</span>`).join('')}</p></div>
-    <div class="connection-art" aria-hidden="true"><div class="connection-ring ring-one"></div><div class="connection-ring ring-two"></div><div class="connection-ring ring-three"></div><span class="connection-cross">✳</span><span class="connection-caption mono">THINK / ACT / CONNECT</span></div></div>
-    <div class="hero-details"><div class="hero-intro"><p class="hero-subtitle">${(data.hero.subtitle.match(/[^｜・]+[｜・]?/gu) || []).map(part=>`<span>${e(part)}</span>`).join('')}</p><a class="round-link" href="#projects"><span>${e(data.hero.cta)}</span><span class="round-arrow" aria-hidden="true">↘</span></a></div><div class="hero-copy prose">${paragraphs(data.hero.paragraphs)}</div></div>
-    <div class="hero-bottom mono"><span>AI / SYSTEM DEVELOPMENT / HANDBALL</span><a href="#about">${e(data.hero.scroll)} <span aria-hidden="true">↓</span></a></div>
-  </div></section>
-  <section class="about dark-section" id="about" aria-labelledby="about-title"><div class="container">${sectionLabel('01',data.about.label)}<div class="about-layout"><div class="about-heading reveal"><h2 id="about-title">${e(data.about.title)}<span class="blue-dot" aria-hidden="true">.</span></h2></div><div class="about-copy prose reveal">${paragraphs(data.about.paragraphs)}</div></div><div class="about-foot mono" aria-hidden="true"><span>UNIVERSITY OF THE RYUKYUS</span><span>305LAB</span><span>HANDBALL</span></div></div></section>
-  <section class="projects light-section" id="projects" aria-labelledby="projects-title"><div class="container">${sectionLabel('02',data.projects.label)}<div class="section-title-row reveal"><h2 id="projects-title">${e(data.projects.title)}<span class="blue-dot" aria-hidden="true">.</span></h2><span class="section-counter mono" aria-hidden="true">${String(data.projects.items.length).padStart(2,'0')}</span></div>${data.projects.items.map((item,index)=>`<article class="project">${imageMarkup(item.image)||courtGraphic(item.visualCaption)}<div class="project-info"><div class="project-title reveal"><p class="mono category">${String(index+1).padStart(2,'0')} / ${e(item.category)}</p><h3>${e(item.title).replace('RYUDAIHandTrack','RYUDAI<wbr>HandTrack')}</h3></div><div class="prose reveal">${paragraphs(item.paragraphs)}</div></div></article>`).join('')}</div></section>
-  <section class="experience light-section" id="experience" aria-labelledby="experience-title"><div class="container">${sectionLabel('03',data.experience.label)}<div class="section-title-row reveal"><h2 id="experience-title">${e(data.experience.title)}<span class="blue-dot" aria-hidden="true">.</span></h2><span class="section-counter mono" aria-hidden="true">${String(data.experience.items.length).padStart(2,'0')}</span></div><div class="experience-list">${data.experience.items.map((item,index)=>{
-    const media = imageMarkup(item.image);
-    return `<article class="experience-item${media?' has-media':''} reveal"><span class="experience-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><div class="experience-content"><div class="experience-heading"><p class="category mono">${e(item.category)}</p><h3>${e(item.title)}</h3></div><div class="experience-details">${media}<div class="experience-body prose">${paragraphs(item.paragraphs)}</div></div></div></article>`;
-  }).join('')}</div></div></section>
+  return `<section class="cover" id="top" aria-labelledby="hero-title">
+    <div class="cover-track"><div class="cover-stage">
+      <div class="cover-photo"><img src="assets/handball.jpg" srcset="assets/handball-800.jpg 800w, assets/handball.jpg 1600w" sizes="100vw" width="1600" height="1066" fetchpriority="high" alt="${e(data.hero.photoAlt)}"></div>
+      <svg class="cover-arc" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true"><path d="M-12 460 C80 160 480 -40 780 80 M1205 585 Q1100 880 760 895"/></svg>
+      <div class="cover-name"><p>PERSONAL PORTFOLIO</p><h1 id="hero-title" aria-label="${e(data.romanizedName)}">${data.romanizedName.split(' ').map(word=>`<svg aria-hidden="true" viewBox="0 0 540 152"><text x="14" y="136" textLength="505" lengthAdjust="spacingAndGlyphs" transform="skewX(-10)" dx="12">${e(word)}</text></svg>`).join('')}</h1><small>OKINAWA, JAPAN<br>University of the Ryukyus</small></div>
+      <div class="cover-copy"><h2>${data.hero.lines.map(line=>`<span>${e(line)}</span>`).join(' ')}</h2><p>${e(data.hero.subtitle)}</p></div>
+      <a class="cover-scroll" href="#about">${e(data.hero.scroll)} ↓</a>
+    </div></div></section>
+  <section class="about mindset dark-section" id="about" aria-labelledby="about-title"><div class="container">${sectionLabel("01","MINDSET")}<h2 id="about-title" class="mindset-label">${e(data.about.title)}</h2><p class="mindset-statement">${e(data.hero.paragraphs[0])}</p><div class="mindset-columns"><div class="mindset-values prose">${paragraphs(data.hero.paragraphs.slice(1))}</div><div class="about-copy prose">${paragraphs(data.about.paragraphs)}</div></div><a class="round-link mindset-next" href="#projects">${e(data.hero.cta)} <span class="round-arrow">↘</span></a></div></section>
+  <section class="projects build light-section" id="projects" aria-labelledby="projects-title"><div class="container">${sectionLabel("02","BUILD")}<h2 id="projects-title" class="build-label">${e(data.projects.title)}</h2>${data.projects.items.map(item=>`<article class="build-project"><header class="build-heading"><p class="category mono">${e(item.category)}</p><h3>${e(item.title).replace("RYUDAIHandTrack","RYUDAI<wbr>HandTrack")}</h3></header>${courtGraphic(item.visualCaption,data.projects.replayLabel)}<div class="build-result">${imageMarkup(item.image)}<div class="build-copy prose">${paragraphs(item.paragraphs)}</div></div></article>`).join("")}</div></section>
+  <section class="experience light-section" id="experience" aria-labelledby="experience-title"><div class="container">${sectionLabel("03",data.experience.label)}<h2 id="experience-title">${e(data.experience.title)}</h2><div class="activity-stories">${data.experience.items.map((item,index)=>{const media=imageMarkup(item.image);const type=item.layout || "story";return `<article class="activity activity--${e(type)}"><header class="activity-heading"><p class="category mono">${String(index+1).padStart(2,"0")} / ${e(item.category)}</p><h3>${e(item.title)}</h3></header>${item.steps ? `<ol class="activity-flow">${item.steps.map(step=>`<li>${e(step)}</li>`).join("")}</ol>`:""}<div class="activity-detail">${media}<div class="prose">${paragraphs(item.paragraphs)}</div></div></article>`;}).join("")}</div></div></section>
   <section class="contact dark-section" id="contact" aria-labelledby="contact-title"><div class="container">${sectionLabel('04',data.contact.label)}<div class="contact-title-wrap reveal"><h2 id="contact-title" lang="en">Let's<br><em>Connect.</em></h2><span class="contact-arrow" aria-hidden="true">↗</span></div><div class="contact-links"><a class="email-link reveal" href="mailto:${CONTACT_EMAIL}"><span class="contact-link-label mono">${e(data.contact.emailLabel)}</span><span class="email-address">${CONTACT_EMAIL}${arrow}</span></a><div class="lab-link reveal"><p class="contact-link-label mono">${e(data.contact.labLabel)}</p><a href="${LAB_INSTAGRAM}" target="_blank" rel="noopener noreferrer">${e(data.contact.instagramLabel)}${arrow}<span class="sr-only"> (${e(data.contact.externalLabel)})</span></a></div></div></div></section>`;
 }
 
@@ -116,6 +114,7 @@ function render(data, language) {
     const target = document.getElementById(location.hash.slice(1));
     target?.scrollIntoView({behavior:'instant'});
   }
+  bindCoverScroll();
   setupMotion();
   setupSectionNavigation();
 }
@@ -170,3 +169,52 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 let initialLanguage = 'ja';
 try { initialLanguage = localStorage.getItem('profile-language') || 'ja'; } catch { /* Default to Japanese. */ }
 setLanguage(initialLanguage);
+
+document.querySelector('#content').addEventListener('click', event => {
+  const button = event.target.closest('.replay-pass');
+  if (!button || motionPreference.matches) return;
+  const ball = button.closest('figure').querySelector('.court-ball');
+  ball.getAnimations().forEach(animation => animation.cancel());
+  ball.animate([
+    {transform:'translate(-396px,82px)',offset:0},
+    {transform:'translate(-286px,-44px)',offset:.32},
+    {transform:'translate(-136px,22px)',offset:.66},
+    {transform:'translate(0,0)',offset:1}
+  ], {duration:1500,easing:'ease-in-out'});
+});
+
+let releaseCoverScroll;
+function bindCoverScroll() {
+  releaseCoverScroll?.();
+  const track = document.querySelector('.cover-track');
+  if (!track || motionPreference.matches) return;
+  track.classList.add('tracks-scroll');
+  const stage = track.querySelector('.cover-stage');
+  let frame = 0;
+  const ramp = (value, start, end) => Math.min(1, Math.max(0, (value-start)/(end-start)));
+  function paint() {
+    frame = 0;
+    const bounds = track.getBoundingClientRect();
+    const progress = ramp(-bounds.top, 0, Math.max(1, Math.min(bounds.height, window.innerHeight)));
+    const move = ramp(progress, 0, .68);
+    const values = {
+      '--split': ramp(progress, 0, .42),
+      '--ink': 1-ramp(progress, .04, .38),
+      '--shift': move,
+      '--photo-alpha': 1-ramp(progress, .58, 1)
+    };
+    for (const [key,value] of Object.entries(values)) stage.style.setProperty(key, value);
+  }
+  function schedule() { if (!frame) frame = requestAnimationFrame(paint); }
+  window.addEventListener('scroll', schedule, {passive:true});
+  window.addEventListener('resize', schedule);
+  paint();
+  releaseCoverScroll = () => {
+    window.removeEventListener('scroll', schedule);
+    window.removeEventListener('resize', schedule);
+    cancelAnimationFrame(frame);
+    track.classList.remove('tracks-scroll');
+    stage.removeAttribute('style');
+  };
+}
+motionPreference.addEventListener('change', bindCoverScroll);

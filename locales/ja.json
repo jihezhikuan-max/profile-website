@@ -25,7 +25,8 @@
       "まだ知らない世界に触れながら、自分自身の可能性を広げています。"
     ],
     "cta": "活動を見る",
-    "scroll": "スクロール"
+    "scroll": "スクロール",
+    "photoAlt": "赤いユニフォームを着た吉賀智寛が、体育館でハンドボールを持ちながら周囲に指示を出している。"
   },
   "about": {
     "title": "私について",
@@ -55,7 +56,8 @@
         },
         "visualCaption": "ハンドボールをモチーフにしたグラフィック（アプリの画面ではありません）"
       }
-    ]
+    ],
+    "replayLabel": "パスを再生"
   },
   "experience": {
     "title": "活動・経験",
@@ -65,14 +67,23 @@
         "title": "企業向けAI活用支援（OJT）",
         "category": "AI / OJT",
         "paragraphs": [
-          "305LABの活動として、企業の業務課題に対するAI活用を支援しています。",
-          "担当者へのヒアリングをもとに、デモデータを使ってAIによる解決方法を事前に検証。その結果を踏まえ、OJT形式で担当者と一緒に操作しながら、AIの活用方法を伝えています。"
+          "305LABの活動として、企業の業務課題に対するAI活用を支援しています。"
         ],
         "image": {
           "src": "",
           "alt": "",
           "caption": ""
-        }
+        },
+        "layout": "ojt",
+        "theme": [
+          "PROBLEM",
+          "SOLUTION"
+        ],
+        "steps": [
+          "企業の業務課題をヒアリング",
+          "AIを活用した解決方法を検討・検証",
+          "担当者と一緒に操作しながら活用方法を共有"
+        ]
       },
       {
         "title": "AI講座の運営支援",
@@ -82,10 +93,19 @@
           "講座の準備や当日の運営、受講者のサポートなどを担当しています。"
         ],
         "image": {
-          "src": "",
-          "alt": "",
-          "caption": ""
-        }
+          "src": "assets/ai-course-support-1200.jpg",
+          "width": 1200,
+          "height": 901,
+          "alt": "AI講座で、パソコンを操作する受講者のそばに立ち、サポートしている様子。",
+          "caption": "",
+          "smallSrc": "assets/ai-course-support-800.jpg"
+        },
+        "layout": "course",
+        "theme": [
+          "LEARN",
+          "BUILD",
+          "SHARE"
+        ]
       },
       {
         "title": "ハンドボール部での活動",
@@ -95,13 +115,18 @@
           "小・中・高校ではそれぞれキャプテンを務め、中学時代にはJOC山口県選抜のキャプテン、高校時代には山口県国体選抜の副キャプテンを経験しました。"
         ],
         "image": {
-          "src": "assets/handball.jpg",
-          "smallSrc": "assets/handball-800.jpg",
-          "width": 1600,
-          "height": 1066,
-          "alt": "赤いユニフォームを着た吉賀智寛が、体育館でハンドボールを持ちながら周囲に指示を出している。",
-          "caption": ""
-        }
+          "src": "assets/handball-action-1200.jpg",
+          "width": 1200,
+          "height": 800,
+          "alt": "赤いユニフォームの吉賀智寛が、相手選手の間でボールを高く掲げてシュートする場面。",
+          "caption": "",
+          "smallSrc": "assets/handball-action-800.jpg"
+        },
+        "layout": "team",
+        "theme": [
+          "TEAMWORK",
+          "LEADERSHIP"
+        ]
       }
     ]
   },
